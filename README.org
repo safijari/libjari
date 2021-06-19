@@ -25,13 +25,13 @@ Fin!
 #+BEGIN_SRC ipython :results output org drawer
 from libjari.jdraw import draw_text
 
-text = draw_text("hey my name is your name", 80)
+text = draw_text("hey my name is your name", 30)
 
-text.save("/tmp/test.png")
+text.save("./readme_assets/test.png")
 #+END_SRC
 
 #+RESULTS:
 :results:
 :end:
 
-[[/tmp/test.png]]
+[[./readme_assets/test.png]]
