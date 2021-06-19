@@ -1,0 +1,37 @@
+* libjari
+
+Because narcissim should at least be useful...
+
+** Wha?
+
+A whole bunch of functions and classes I've written over the years that I find to be useful.
+
+** For Whu?
+
+Me.
+
+You are of course welcome to use this.
+
+** Fin?
+
+Fin!
+
+** But hole up, what's actually in here?
+   
+=Under construction=
+
+** Examples?
+
+#+BEGIN_SRC ipython :results output org drawer
+from libjari.jdraw import draw_text
+
+text = draw_text("hey my name is your name", 80)
+
+text.save("/tmp/test.png")
+#+END_SRC
+
+#+RESULTS:
+:results:
+:end:
+
+[[/tmp/test.png]]
