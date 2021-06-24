@@ -35,3 +35,16 @@ text.save("./readme_assets/test.png")
 :end:
 
 [[./readme_assets/test.png]]
+
+
+
+#+BEGIN_SRC ipython :results output org drawer
+
+
+print(convert_color("226f75"))
+#+END_SRC
+
+#+RESULTS:
+:results:
+(34, 111, 117)
+:end:
