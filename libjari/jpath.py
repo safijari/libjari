@@ -18,6 +18,10 @@ class JPath(Path):
             out: Dict[str, Any] = json.load(f)
             return out
 
+    def write_json(self, indict) -> None:
+        with self.open("w") as f:
+            json.dump(indict, f)
+
     def read_yaml(self) -> Dict[str, Any]:
         with self.open() as f:
             out: Dict[str, Any] = yaml.load(f)
