@@ -86,10 +86,17 @@ if __name__ == "__main__":
     d = JPath.from_home("Dropbox/dots/gcal_creds.json").read_json()
     c = Gcal(d["client_id"], d["secret"])
     for item in c.get_recnt_events_for_calendar("jari@simberobotics.com"):
+        # print(item.keys())
         if "start" in item:
-            try:
-                m1 = maya.parse(item["start"]["dateTime"]).epoch
-                m2 = maya.parse(item["end"]["dateTime"]).epoch
-                print(m1, m2)
-            except Exception:
-                pass
+            print(item["summary"])
+            print(item["start"])
+            print(item["end"])
+            print(item)
+            # print("start" in item)
+            # print("end" in item)
+        #     try:
+        #         m1 = maya.parse(item["start"]["dateTime"]).epoch
+        #         m2 = maya.parse(item["end"]["dateTime"]).epoch
+        #         print(m1, m2)
+        #     except Exception:
+        #         pass

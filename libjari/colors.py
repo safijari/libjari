@@ -1,23 +1,3 @@
-from libjari.jpath import JPath
-from PIL import Image, ImageDraw, ImageFont
-
-
-def draw_text(text, text_size, color=(255, 255, 255), font=JPath.home().str + "/Downloads/mononoki-Bold.ttf"):
-    fnt = ImageFont.truetype(
-        JPath(font).str, text_size
-    )
-    w, h = fnt.getsize(text)
-
-    txt = Image.new("RGBA", (w, h), (255, 255, 255, 0))
-
-    d = ImageDraw.Draw(txt)
-
-    # draw text, half opacity
-    d.text((0, 0), text, font=fnt, fill=convert_color(color))
-
-    return txt
-
-
 color_names = {
     "white": "#FFFFFF",
     "silver": "#C0C0C0",
@@ -67,6 +47,8 @@ def convert_color(color_str):
 
     return int(hr, 16), int(hg, 16), int(hb, 16)
 
-# def convert_color_float(color_str):
-#     r, g, b = convert_color(color_str)
-#     return r/255.0, g/255.0, b/255.0
+def convert_color_float(color_str):
+    if isinstance(color_str, tuple):
+        return color_str
+    r, g, b = convert_color(color_str)
+    return r/255.0, g/255.0, b/255.0
