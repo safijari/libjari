@@ -1,6 +1,6 @@
 * libjari
 
-Because narcissim should at least be useful...
+I suck at names, so here's a library written by Jari called libjari.
 
 ** Wha?
 
